@@ -23,6 +23,7 @@
    markdown-mode+
    nginx-mode
    puppet-mode
+   web-mode
    yaml-mode
    zenburn-theme
    ))
