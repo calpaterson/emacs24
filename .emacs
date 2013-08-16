@@ -51,6 +51,7 @@
 (global-set-key [f5] 'compile)
 
 ;; Nuclear whitespace mode
+(setq-default indent-tabs-mode nil)
 (add-hook 'write-file-hooks (lambda () (if (not indent-tabs-mode)
           (save-excursion (untabify (point-min) (point-max))
           (delete-trailing-whitespace)))))
@@ -110,6 +111,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(python-mode-hook nil)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
