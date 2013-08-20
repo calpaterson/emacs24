@@ -1,12 +1,12 @@
 ;; Hide the tool bar and the scroll bar
-(tool-bar-mode -1) 
+(tool-bar-mode -1)
 (scroll-bar-mode -1)
 
 ;; Packages
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-refresh-contents)
 
 (mapc
@@ -38,7 +38,7 @@
   (dolist (buf (buffer-list))
     (with-current-buffer buf
       (when (and (buffer-file-name) (not (buffer-modified-p)))
-	(revert-buffer t t t) )))
+        (revert-buffer t t t) )))
   (message "Reverted open files."))
 
 ;; Get rid of the splash screen
@@ -69,10 +69,10 @@
   (interactive)
   (let ((current-value (frame-parameter nil 'fullscreen)))
     (set-frame-parameter nil 'fullscreen
-			 (if (equal 'fullboth current-value)
-			     (if (boundp 'old-fullscreen) old-fullscreen nil)
-			   (progn (setq old-fullscreen current-value)
-				  'fullboth)))))
+                         (if (equal 'fullboth current-value)
+                             (if (boundp 'old-fullscreen) old-fullscreen nil)
+                           (progn (setq old-fullscreen current-value)
+                                  'fullboth)))))
 
 (require 'auto-complete)
 (global-auto-complete-mode t)
@@ -104,6 +104,12 @@
 ;; Keybindings for playing with windowing
 (global-set-key [f11] 'toggle-fullscreen)
 (global-set-key (kbd "C-x \"") 'list-buffers)
+
+;; Unset markdown-mode's M-left and M-right
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (local-unset-key (kbd "<M-left>"))
+            (local-unset-key (kbd "<M-right>"))))
 
 (require 'uniquify)
 (custom-set-variables
