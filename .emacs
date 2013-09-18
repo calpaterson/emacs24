@@ -18,6 +18,7 @@
    crontab-mode
    dired+
    icicles
+   magit
    markdown-mode
    markdown-mode+
    nginx-mode
