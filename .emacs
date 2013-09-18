@@ -17,7 +17,6 @@
    auto-complete
    crontab-mode
    dired+
-   egg
    icicles
    markdown-mode
    markdown-mode+
@@ -49,6 +48,9 @@
 
 ;; Compile
 (global-set-key [f5] 'compile)
+
+;; Magit
+(global-set-key (kbd "C-x v w") 'magit-status)
 
 ;; Nuclear whitespace mode
 (setq-default indent-tabs-mode nil)
@@ -93,9 +95,6 @@
 
 (require 'icicles)
 (icicle-mode)
-
-(require 'egg)
-(egg-minor-mode)
 
 ;; Crontab
 (add-to-list 'load-path "~/.emacs.d/crontab/")
