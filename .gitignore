@@ -1,5 +1,6 @@
-elpa
-auto-save-list
-image-dired
-ac-comphist.dat
 *~
+ac-comphist.dat
+auto-save-list
+elpa
+image-dired
+tramp
