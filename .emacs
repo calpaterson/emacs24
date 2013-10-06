@@ -7,26 +7,29 @@
 (package-initialize)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-refresh-contents)
 
-(mapc
- (lambda (package)
-   (or (package-installed-p package)
-       (package-install package)))
- '(
-   auto-complete
-   crontab-mode
-   dired+
-   icicles
-   magit
-   markdown-mode
-   markdown-mode+
-   nginx-mode
-   puppet-mode
-   web-mode
-   yaml-mode
-   zenburn-theme
-   ))
+(defconst important-packages
+  '(
+    auto-complete
+    crontab-mode
+    dired+
+    icicles
+    magit
+    markdown-mode
+    markdown-mode+
+    nginx-mode
+    puppet-mode
+    web-mode
+    yaml-mode
+    zenburn-theme
+    ))
+
+(require 'cl-lib)
+(when (cl-notevery 'package-installed-p important-packages)
+  (package-refresh-contents)
+  (dolist (pkg important-packages)
+    (when (not (package-installed-p pkg))
+      (package-install pkg))))
 
 ;; Theme
 (load-theme 'zenburn t)
@@ -56,8 +59,8 @@
 ;; Nuclear whitespace mode
 (setq-default indent-tabs-mode nil)
 (add-hook 'write-file-hooks (lambda () (if (not indent-tabs-mode)
-          (save-excursion (untabify (point-min) (point-max))
-          (delete-trailing-whitespace)))))
+                                           (save-excursion (untabify (point-min) (point-max))
+                                                           (delete-trailing-whitespace)))))
 
 ;; Use chromium instead of ff
 (setq browse-url-browser-function 'browse-url-generic
