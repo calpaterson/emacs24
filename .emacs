@@ -58,9 +58,12 @@
 
 ;; Nuclear whitespace mode
 (setq-default indent-tabs-mode nil)
-(add-hook 'write-file-hooks (lambda () (if (not indent-tabs-mode)
-                                           (save-excursion (untabify (point-min) (point-max))
-                                                           (delete-trailing-whitespace)))))
+(setq-default delete-trailing-lines nil)
+(add-hook 'write-file-hooks
+          (lambda ()
+            (if (not indent-tabs-mode)
+                (save-excursion (untabify (point-min) (point-max))
+                                (delete-trailing-whitespace)))))
 
 ;; Use chromium instead of ff
 (setq browse-url-browser-function 'browse-url-generic
