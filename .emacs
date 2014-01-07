@@ -53,6 +53,10 @@
 ;; Compile
 (global-set-key [f5] 'compile)
 
+;; M-up and M-down do the same as C-up and C-down
+(global-set-key [(meta up)] 'backward-paragraph)
+(global-set-key [(meta down)] 'forward-paragraph)
+
 ;; Magit
 (global-set-key (kbd "C-x v w") 'magit-status)
 
@@ -115,7 +119,9 @@
 (add-hook 'markdown-mode-hook
           (lambda ()
             (local-unset-key (kbd "<M-left>"))
-            (local-unset-key (kbd "<M-right>"))))
+            (local-unset-key (kbd "<M-right>"))
+            (local-unset-key (kbd "<M-down>"))
+            (local-unset-key (kbd "<M-up>"))))
 
 (require 'uniquify)
 (custom-set-variables
