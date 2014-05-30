@@ -53,6 +53,9 @@
 ;; Compile
 (global-set-key [f5] 'compile)
 
+;; Fill region is a common command
+(global-set-key (kbd "M-#") 'fill-region)
+
 ;; M-up and M-down do the same as C-up and C-down
 (global-set-key [(meta up)] 'backward-paragraph)
 (global-set-key [(meta down)] 'forward-paragraph)
