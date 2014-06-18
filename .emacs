@@ -13,6 +13,8 @@
     auto-complete
     crontab-mode
     dired+
+    flycheck
+    flycheck-color-mode-line
     icicles
     magit
     markdown-mode
@@ -43,6 +45,10 @@
       (when (and (buffer-file-name) (not (buffer-modified-p)))
         (revert-buffer t t t) )))
   (message "Reverted open files."))
+
+;; Flycheck on by default
+(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'after-init-hook #'flycheck-color-mode-line-mode)
 
 ;; Get rid of the splash screen
 (setq inhibit-splash-screen t)
@@ -135,6 +141,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(global-flycheck-mode t nil (flycheck))
  '(python-mode-hook nil)
  '(shell-file-name "/bin/sh")
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
@@ -143,4 +150,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#3F3F3F" :foreground "#DCDCCC" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 108 :width normal :foundry "xos4" :family "Terminus")))))
+ '(default ((t (:inherit nil :stipple nil :background "#3F3F3F" :foreground "#DCDCCC" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 108 :width normal :foundry "xos4" :family "Terminus"))))
+ '(flycheck-color-mode-line-error-face ((t (:inherit flycheck-fringe-error :foreground "#ff0000" :weight normal))))
+ '(flycheck-color-mode-line-warning-face ((t (:inherit flycheck-fringe-warning :foreground "#ffda00" :weight normal)))))
