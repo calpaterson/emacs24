@@ -10,17 +10,34 @@
 
 (defconst important-packages
   '(
+    ansible
     auto-complete
+    company
     crontab-mode
+    csv-mode
     dired+
+    epl
     flycheck
     flycheck-color-mode-line
+    flycheck-pyflakes
+    flycheck-tip
+    flymake-rust
+    fuzzy-match
+    git-commit-mode
+    git-rebase-mode
+    gitignore-mode
+    grep+
     icicles
     magit
     markdown-mode
     markdown-mode+
     nginx-mode
+    pkg-info
+    popup
     puppet-mode
+    ruby-block
+    ruby-end
+    rust-mode
     web-mode
     yaml-mode
     zenburn-theme
