@@ -11,7 +11,6 @@
 (defconst important-packages
   '(
     ansible
-    auto-complete
     company
     crontab-mode
     csv-mode
@@ -116,8 +115,9 @@
                            (progn (setq old-fullscreen current-value)
                                   'fullboth)))))
 
-(require 'auto-complete)
-(global-auto-complete-mode t)
+;; (require 'auto-complete)
+;; (global-auto-complete-mode t)
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;; Always do syntax highlighting
 (global-font-lock-mode 1)
