@@ -27,6 +27,7 @@
     gitignore-mode
     grep+
     icicles
+    jedi
     magit
     markdown-mode
     markdown-mode+
@@ -160,6 +161,11 @@
             (local-unset-key (kbd "<M-down>"))
             (local-unset-key (kbd "<M-up>"))))
 
+(add-hook 'python-mode-hook
+          (lambda ()
+            (company-mode -1)
+            (jedi:setup)))
+
 (require 'uniquify)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -167,7 +173,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(global-flycheck-mode t nil (flycheck))
- '(python-mode-hook nil)
  '(shell-file-name "/bin/sh")
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 (custom-set-faces
