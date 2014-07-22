@@ -89,6 +89,9 @@
 ;; Magit
 (global-set-key (kbd "C-x v w") 'magit-status)
 
+;; TRAMP root magic (commented because it interferes with normal sudo use
+;; (set-default 'tramp-default-proxies-alist (quote ((".*" "\\`root\\'" "/ssh:%h:"))))
+
 ;; Nuclear whitespace mode
 (setq-default indent-tabs-mode nil)
 (setq-default delete-trailing-lines nil)
