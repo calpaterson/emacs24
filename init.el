@@ -154,7 +154,7 @@
 
 ;; Keybindings for playing with windowing
 (global-set-key [f11] 'toggle-fullscreen)
-(global-set-key (kbd "C-x \"") 'list-buffers)
+(global-set-key (kbd "C-x \"") 'ibuffer)
 
 ;; Unset markdown-mode's M-left and M-right
 (add-hook 'markdown-mode-hook
