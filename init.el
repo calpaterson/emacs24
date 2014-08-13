@@ -38,6 +38,7 @@
     ruby-block
     ruby-end
     rust-mode
+    virtualenvwrapper
     web-mode
     yaml-mode
     zenburn-theme
