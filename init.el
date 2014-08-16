@@ -54,6 +54,9 @@
 ;; Theme
 (load-theme 'zenburn t)
 
+;; Hippie expand
+(global-set-key "\M-/" 'hippie-expand)
+
 ;; Revert all buffers
 (defun revert-all-buffers ()
   "Refreshes all open buffers from their respective files."
