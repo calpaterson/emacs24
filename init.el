@@ -28,6 +28,7 @@
     grep+
     icicles
     jedi
+    json-mode
     magit
     markdown-mode
     markdown-mode+
