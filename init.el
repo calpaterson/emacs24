@@ -26,7 +26,7 @@
     git-rebase-mode
     gitignore-mode
     grep+
-    ;; icicles
+    icicles
     jedi
     json-mode
     magit
@@ -142,8 +142,8 @@
 ;; Turn on column numbers in the mode line
 (column-number-mode t)
 
-;; (require 'icicles)
-;; (icicle-mode)
+(require 'icicles)
+(icicle-mode)
 
 ;; Fix colours in compilation window
 (require 'ansi-color)
