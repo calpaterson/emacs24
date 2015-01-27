@@ -115,14 +115,9 @@
 (global-linum-mode)
 
 ;; Full Screen
-(defun toggle-fullscreen (&optional f)
+(defun toggle-fullscreen ()
   (interactive)
-  (let ((current-value (frame-parameter nil 'fullscreen)))
-    (set-frame-parameter nil 'fullscreen
-                         (if (equal 'fullboth current-value)
-                             (if (boundp 'old-fullscreen) old-fullscreen nil)
-                           (progn (setq old-fullscreen current-value)
-                                  'fullboth)))))
+  (shell-command "wmctrl -r :ACTIVE: -btoggle,fullscreen"))
 
 ;; (require 'auto-complete)
 ;; (global-auto-complete-mode t)
