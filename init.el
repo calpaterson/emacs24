@@ -58,6 +58,12 @@
 ;; Hippie expand
 (global-set-key "\M-/" 'hippie-expand)
 
+;; Windmove
+(global-set-key (kbd "C-x <left>")  'windmove-left)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
+(global-set-key (kbd "C-x <up>")    'windmove-up)
+(global-set-key (kbd "C-x <down>")  'windmove-down)
+
 ;; Revert all buffers
 (defun revert-all-buffers ()
   "Refreshes all open buffers from their respective files."
