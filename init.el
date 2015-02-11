@@ -93,10 +93,6 @@
 ;; Magic to fix an ubuntu keyboard layout
 (global-set-key [dead-grave] "`")
 
-;; M-up and M-down do the same as C-up and C-down
-(global-set-key [(meta up)] 'backward-paragraph)
-(global-set-key [(meta down)] 'forward-paragraph)
-
 ;; Magit
 (global-set-key (kbd "C-x v w") 'magit-status)
 
