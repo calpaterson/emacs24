@@ -78,6 +78,11 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (add-hook 'after-init-hook #'flycheck-color-mode-line-mode)
 
+;; Assume postgres
+(add-hook 'sql-mode-hook
+          (lambda ()
+            (sql-set-product 'postgres)))
+
 ;; Get rid of the splash screen
 (setq inhibit-splash-screen t)
 
