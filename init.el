@@ -11,7 +11,7 @@
 (defconst important-packages
   '(
     ansible
-    company
+    auto-complete
     crontab-mode
     csv-mode
     dired+
@@ -126,9 +126,8 @@
   (interactive)
   (shell-command "wmctrl -r :ACTIVE: -btoggle,fullscreen"))
 
-;; (require 'auto-complete)
-;; (global-auto-complete-mode t)
-(add-hook 'after-init-hook 'global-company-mode)
+(require 'auto-complete)
+(global-auto-complete-mode t)
 
 ;; Always do syntax highlighting
 (global-font-lock-mode 1)
@@ -173,7 +172,6 @@
 
 (add-hook 'python-mode-hook
           (lambda ()
-            (company-mode -1)
             (jedi:setup)))
 
 (require 'uniquify)
