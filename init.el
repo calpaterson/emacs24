@@ -36,7 +36,6 @@
     pkg-info
     popup
     puppet-mode
-    pyenv-mode
     ruby-block
     ruby-end
     rust-mode
@@ -172,7 +171,6 @@
             (local-unset-key (kbd "<M-up>"))))
 
 ; Python
-(pyenv-mode)
 (add-hook 'python-mode-hook
           (lambda ()
             (jedi:setup)))
