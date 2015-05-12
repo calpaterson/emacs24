@@ -126,6 +126,7 @@
 
 ;; Magit
 (global-set-key (kbd "C-x v w") 'magit-status)
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 ;; TRAMP root magic (commented because it interferes with normal sudo use
 ;; (set-default 'tramp-default-proxies-alist (quote ((".*" "\\`root\\'" "/ssh:%h:"))))
