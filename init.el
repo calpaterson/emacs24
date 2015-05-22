@@ -84,6 +84,9 @@
 ;; Hippie expand
 (global-set-key "\M-/" 'hippie-expand)
 
+;; Middle click paste at point
+(setq mouse-yank-at-point t)
+
 ;; Windmove
 (global-set-key (kbd "C-c <left>")  'windmove-left)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
