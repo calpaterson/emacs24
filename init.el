@@ -205,6 +205,9 @@
           (lambda ()
             (jedi:setup)))
 
+(when (fboundp 'electric-indent-mode)
+  (electric-indent-mode -1))
+
 (require 'uniquify)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
