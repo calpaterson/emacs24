@@ -22,8 +22,6 @@
     flycheck-tip
     flymake-rust
     fuzzy-match
-    git-commit-mode
-    git-rebase-mode
     gitignore-mode
     grep+
     icicles
