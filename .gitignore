@@ -10,3 +10,6 @@ eshell
 flycheck_
 image-dired
 tramp
+url/
+var/
+flycheck-init.el
