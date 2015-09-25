@@ -84,6 +84,9 @@
 ;; Hippie expand
 (global-set-key "\M-/" 'hippie-expand)
 
+;; Turn off the buzzer -_-
+(setq ring-bell-function 'ignore)
+
 ;; Middle click paste at point
 (setq mouse-yank-at-point t)
 
