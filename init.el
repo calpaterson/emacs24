@@ -29,6 +29,7 @@
     jedi
     json-mode
     magit
+    magit-annex
     markdown-mode
     markdown-mode+
     nginx-mode
