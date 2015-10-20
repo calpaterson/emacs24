@@ -13,7 +13,6 @@
     ansible
     auto-complete
     crontab-mode
-    csv-mode
     dired+
     epl
     flycheck
