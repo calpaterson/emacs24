@@ -249,3 +249,4 @@
  '(flycheck-color-mode-line-error-face ((t (:inherit flycheck-fringe-error :foreground "#ff0000" :weight normal))))
  '(flycheck-color-mode-line-warning-face ((t (:inherit flycheck-fringe-warning :foreground "#ffda00" :weight normal)))))
 (put 'downcase-region 'disabled nil)
+(put 'narrow-to-region 'disabled nil)
