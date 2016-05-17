@@ -52,6 +52,10 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
+;; Never split horizontally, vertically only if there's lots of space
+(setq split-height-threshold 200)
+(setq split-width-threshold nil)
+
 ;; Backup configuration
 (setq version-control t ;; Use version numbers for backups.
       kept-new-versions 10 ;; Number of newest versions to keep.
