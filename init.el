@@ -161,11 +161,6 @@
 (require 'linum)
 (global-linum-mode)
 
-;; Full Screen
-(defun toggle-fullscreen ()
-  (interactive)
-  (shell-command "wmctrl -r :ACTIVE: -btoggle,fullscreen"))
-
 (require 'auto-complete)
 (global-auto-complete-mode t)
 
@@ -215,7 +210,6 @@
 (require 'crontab-mode)
 
 ;; Keybindings for playing with windowing
-(global-set-key [f11] 'toggle-fullscreen)
 (global-set-key (kbd "C-x \"") 'ibuffer)
 
 ;; Unset markdown-mode's M-left and M-right
