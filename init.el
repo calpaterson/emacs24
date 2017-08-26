@@ -237,6 +237,7 @@
  '(dired-listing-switches "-alh")
  '(global-flycheck-mode t nil (flycheck))
  '(helm-mode-fuzzy-match t)
+ '(py-underscore-word-syntax-p nil)
  '(shell-file-name "/bin/sh")
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 (custom-set-faces
