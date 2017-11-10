@@ -1,3 +1,8 @@
+;; NOTES
+; Making cygwin work under Windows (:()
+; run regedit, edit HKEY_CURRENT_USER/Environment/PATH to include the cygwin
+; path
+
 ;; Hide the tool bar and the scroll bar
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -12,7 +17,6 @@
   '(
     ansible
     auto-complete
-    crontab-mode
     dired+
     epl
     flycheck
@@ -153,10 +157,6 @@
                 (save-excursion (untabify (point-min) (point-max))
                                 (delete-trailing-whitespace)))))
 
-;; Use chromium instead of ff
-(setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "chromium-browser")
-
 ;; Line numbering
 (require 'linum)
 (global-linum-mode)
@@ -205,10 +205,6 @@
   (toggle-read-only))
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 
-;; Crontab
-(add-to-list 'load-path "~/.emacs.d/crontab/")
-(require 'crontab-mode)
-
 ;; Keybindings for playing with windowing
 (global-set-key (kbd "C-x \"") 'ibuffer)
 
@@ -240,13 +236,5 @@
  '(py-underscore-word-syntax-p nil)
  '(shell-file-name "/bin/sh")
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#3F3F3F" :foreground "#DCDCCC" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 108 :width normal :foundry "xos4" :family "Terminus"))))
- '(flycheck-color-mode-line-error-face ((t (:inherit flycheck-fringe-error :foreground "#ff0000" :weight normal))))
- '(flycheck-color-mode-line-warning-face ((t (:inherit flycheck-fringe-warning :foreground "#ffda00" :weight normal)))))
 (put 'downcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
