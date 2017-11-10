@@ -34,6 +34,7 @@
     markdown-mode
     markdown-mode+
     nginx-mode
+    org
     pkg-info
     popup
     puppet-mode
