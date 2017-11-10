@@ -27,9 +27,6 @@
     fuzzy-match
     gitignore-mode
     grep+
-    ;; helm
-    ;; helm-core
-    ;; helm-projectile
     jedi
     json-mode
     magit
