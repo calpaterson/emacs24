@@ -84,8 +84,10 @@
 (add-hook 'before-save-hook 'force-backup-of-buffer)
 
 ;; Fix copy and paste
-(setq x-select-enable-clipboard t)
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+(if (string-equal system-type "gnu/linux")
+    (progn
+      (setq x-select-enable-clipboard t)
+      (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)))
 
 ;; Theme
 (load-theme 'zenburn t)
