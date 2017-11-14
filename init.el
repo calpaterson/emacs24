@@ -1,7 +1,5 @@
 ;; NOTES
-; Making cygwin work under Windows (:()
-; run regedit, edit HKEY_CURRENT_USER/Environment/PATH to include the cygwin
-; path
+;; To make cygwin work under windows (:() add C:/cygwin/bin to the path
 
 ;; Hide the tool bar and the scroll bar
 (tool-bar-mode -1)
