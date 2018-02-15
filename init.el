@@ -1,5 +1,10 @@
 ;; NOTES
+;; WINDOWS
 ;; To make cygwin work under windows (:() add C:/cygwin/bin to the path
+;; LINUX
+;; On debian, do this to get firefox working
+;; sudo update-alternatives --install /usr/bin/gnome-www-browser gnome-www-browser /home/.../firefox-bin 20
+;; and then run update-alternatives --config gnome-www-browser
 
 ;; Hide the tool bar and the scroll bar
 (tool-bar-mode -1)
