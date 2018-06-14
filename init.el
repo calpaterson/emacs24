@@ -1,6 +1,9 @@
 ;; NOTES
 ;; WINDOWS
-;; To make cygwin work under windows (:() add C:/cygwin/bin to the path
+;; To make cygwin work under windows (:() add C:/cygwin/bin to the path.  Easy
+;; way to do this on locked down windows machines is to use regedit.  The
+;; directory is HKEY_CURRENT_USER/ENVIRONMENT - add a PATH variable of type
+;; REG_EXPAND_SZ
 ;; LINUX
 ;; On debian, do this to get firefox working
 ;; sudo update-alternatives --install /usr/bin/gnome-www-browser gnome-www-browser /home/.../firefox-bin 20
