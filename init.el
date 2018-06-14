@@ -21,46 +21,43 @@
 (add-to-list 'package-archives
              '("org" . "http://orgmode.org/elpa/") t)
 
-(defconst important-packages
+(defconst very-important-packages
   '(
-    ansible
-    auto-complete
     dired+
     epl
-    flycheck
-    flycheck-color-mode-line
-    flycheck-pyflakes
-    flycheck-tip
-    flymake-rust
     fuzzy-match
-    gitignore-mode
     grep+
-    jedi
-    json-mode
-    magit
-    magit-annex
-    markdown-mode
-    markdown-mode+
-    nginx-mode
     org
-    pkg-info
-    popup
-    puppet-mode
-    ruby-block
-    ruby-end
-    rust-mode
-    virtualenvwrapper
-    web-mode
-    yaml-mode
     zenburn-theme
     ))
 
+(defconst quite-important-packages
+  '(
+    ansible
+    auto-complete
+    flycheck
+    flycheck-color-mode-line
+    flycheck-pyflakes
+    jedi
+    json-mode
+    magit
+    markdown-mode
+    markdown-mode+
+    nginx-mode
+    virtualenvwrapper
+    web-mode
+    yaml-mode
+    ))
+
 (require 'cl-lib)
-(when (cl-notevery 'package-installed-p important-packages)
-  (package-refresh-contents)
-  (dolist (pkg important-packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
+(defun cal-ensure-packages-installed (packages)
+  (interactive)
+  (when (cl-notevery 'package-installed-p packages)
+    (package-refresh-contents)
+    (dolist (pkg packages)
+      (when (not (package-installed-p pkg))
+        (package-install pkg)))))
+(cal-ensure-packages-installed very-important-packages)
 
 ;; Never split horizontally, vertically only if there's lots of space
 (setq split-height-threshold 200)
