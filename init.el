@@ -23,10 +23,8 @@
 
 (defconst very-important-packages
   '(
-    dired+
-    epl
-    fuzzy-match
-    grep+
+    auto-complete
+    flycheck
     org
     zenburn-theme
     ))
@@ -35,9 +33,13 @@
   '(
     ansible
     auto-complete
+    dired+
+    epl
     flycheck
     flycheck-color-mode-line
     flycheck-pyflakes
+    fuzzy-match
+    grep+
     jedi
     json-mode
     magit
