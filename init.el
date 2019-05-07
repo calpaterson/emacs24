@@ -165,8 +165,10 @@
                                 (delete-trailing-whitespace)))))
 
 ;; Line numbering
-(require 'linum)
-(global-linum-mode)
+(if (version<= "26.0.50" emacs-version)
+    (global-display-line-numbers-mode)
+  (progn (require 'linum)
+         (global-linum-mode)))
 
 (require 'auto-complete)
 (global-auto-complete-mode t)
