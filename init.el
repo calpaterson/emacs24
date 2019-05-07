@@ -51,6 +51,9 @@
     yaml-mode
     ))
 
+;; Confirm kill...too easy to hit C-x C-c by accident
+(setq confirm-kill-emacs 'yes-or-no-p)
+
 (require 'cl-lib)
 (defun cal-ensure-packages-installed (packages)
   (interactive)
