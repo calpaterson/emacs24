@@ -142,6 +142,9 @@
 ;; Set a sensible fill column
 (setq-default fill-column 79)
 
+;; Have the regex builder use the same syntax as emacs
+(setq reb-re-syntax 'string)
+
 ;; Compile
 (global-set-key [f5] 'compile)
 
