@@ -129,7 +129,6 @@
 
 ;; Flycheck on by default
 (add-hook 'after-init-hook #'global-flycheck-mode)
-(add-hook 'after-init-hook #'flycheck-color-mode-line-mode)
 
 ;; Assume postgres
 (add-hook 'sql-mode-hook
