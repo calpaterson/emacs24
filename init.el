@@ -232,9 +232,15 @@
             (local-unset-key (kbd "<M-up>"))))
 
 ; Python
-(add-hook 'python-mode-hook
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq python-environment-directory "~/.virtualenvs")
+(add-hook 'venv-postactivate-hook
           (lambda ()
-            (jedi:setup)))
+            ;; need to run this first, otherwise jedi functions aren't defined
+            (jedi:setup)
+            (setq jedi:environment-root python-shell-virtualenv-path)
+            (jedi:stop-server)
+            (jedi:start-server)))
 
 (when (fboundp 'electric-indent-mode)
   (electric-indent-mode -1))
