@@ -145,7 +145,7 @@
 (setq reb-re-syntax 'string)
 
 ;; Compile
-(global-set-key [f5] 'compile)
+(global-set-key [f5] 'recompile)
 
 ;; Fill region is a common command
 (global-set-key (kbd "M-#") 'fill-region)
