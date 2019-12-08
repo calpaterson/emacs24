@@ -33,13 +33,10 @@
   '(
     ansible
     auto-complete
-    dired+
     epl
     flycheck
     flycheck-color-mode-line
     flycheck-pyflakes
-    fuzzy-match
-    grep+
     jedi
     json-mode
     magit
