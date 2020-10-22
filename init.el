@@ -97,7 +97,7 @@
       (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)))
 
 ;; Theme
-(load-theme 'zenburn t)
+(load-theme 'solarized-light t)
 
 ;; Hippie expand
 (global-set-key "\M-/" 'hippie-expand)
