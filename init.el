@@ -25,7 +25,7 @@
     auto-complete
     flycheck
     org
-    zenburn-theme
+    solarized-theme
     ))
 
 (defconst quite-important-packages
