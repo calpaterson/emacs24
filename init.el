@@ -47,6 +47,9 @@
     yaml-mode
     ))
 
+;; start the server
+(server-start)
+
 ;; Confirm kill...too easy to hit C-x C-c by accident
 (setq confirm-kill-emacs 'yes-or-no-p)
 
