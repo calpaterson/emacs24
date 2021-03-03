@@ -90,6 +90,9 @@
   (let ((buffer-backed-up nil))
     (backup-buffer)))
 
+;; Backup versioned files too
+(setq vc-make-backup-files t)
+
 (add-hook 'before-save-hook 'force-backup-of-buffer)
 
 ;; Fix copy and paste
