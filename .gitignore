@@ -16,3 +16,4 @@ flycheck-init.el
 projectile-bookmarks.eld
 *.elc
 transient
+bookmarks

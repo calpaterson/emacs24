@@ -90,6 +90,9 @@
   (let ((buffer-backed-up nil))
     (backup-buffer)))
 
+;; save bookmarks to file straight away
+(setq bookmark-save-flag 1)
+
 ;; Backup versioned files too
 (setq vc-make-backup-files t)
 
