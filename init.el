@@ -25,6 +25,7 @@
     auto-complete
     flycheck
     org
+    rg
     solarized-theme
     ))
 
