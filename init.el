@@ -280,7 +280,7 @@ This is useful, e.g., for use with `visual-line-mode;'."
  '(helm-mode-fuzzy-match t)
  '(package-selected-packages
    (quote
-    (go-mode protobuf-mode zenburn-theme yaml-mode web-mode virtualenvwrapper typescript-mode toml-mode terraform-mode solarized-theme org nginx-mode markdown-mode+ magit json-mode jinja2-mode jedi graphql-mode flycheck-pyflakes flycheck-color-mode-line fish-mode feature-mode dockerfile-mode ansible)))
+    (rg gnuplot-mode erlang ansible-vault systemd protobuf-mode zenburn-theme yaml-mode web-mode virtualenvwrapper typescript-mode toml-mode terraform-mode solarized-theme org nginx-mode markdown-mode+ magit json-mode jinja2-mode jedi graphql-mode flycheck-pyflakes flycheck-color-mode-line fish-mode feature-mode dockerfile-mode ansible)))
  '(py-underscore-word-syntax-p nil)
  '(rg-group-result nil)
  '(rg-show-header t)
