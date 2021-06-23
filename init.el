@@ -282,6 +282,8 @@ This is useful, e.g., for use with `visual-line-mode;'."
    (quote
     (go-mode protobuf-mode zenburn-theme yaml-mode web-mode virtualenvwrapper typescript-mode toml-mode terraform-mode solarized-theme org nginx-mode markdown-mode+ magit json-mode jinja2-mode jedi graphql-mode flycheck-pyflakes flycheck-color-mode-line fish-mode feature-mode dockerfile-mode ansible)))
  '(py-underscore-word-syntax-p nil)
+ '(rg-group-result nil)
+ '(rg-show-header t)
  '(shell-file-name "/bin/sh")
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 (put 'downcase-region 'disabled nil)
