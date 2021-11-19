@@ -43,6 +43,7 @@
     markdown-mode
     markdown-mode+
     nginx-mode
+    sqlformat
     virtualenvwrapper
     web-mode
     yaml-mode
@@ -261,6 +262,10 @@ This is useful, e.g., for use with `visual-line-mode;'."
 (when (fboundp 'electric-indent-mode)
   (electric-indent-mode -1))
 
+; SQL
+(setq sqlformat-command 'pgformatter)
+(define-key sql-mode-map (kbd "C-c C-c") 'sqlformat)
+
 ; Org
 (setq org-directory "~/Dropbox/documents/")
 (setq org-default-notes-file (concat org-directory "/notes.org"))
@@ -280,7 +285,7 @@ This is useful, e.g., for use with `visual-line-mode;'."
  '(helm-mode-fuzzy-match t)
  '(package-selected-packages
    (quote
-    (rg gnuplot-mode erlang ansible-vault systemd protobuf-mode zenburn-theme yaml-mode web-mode virtualenvwrapper typescript-mode toml-mode terraform-mode solarized-theme org nginx-mode markdown-mode+ magit json-mode jinja2-mode jedi graphql-mode flycheck-pyflakes flycheck-color-mode-line fish-mode feature-mode dockerfile-mode ansible)))
+    (sqlformat rg gnuplot-mode erlang ansible-vault systemd protobuf-mode zenburn-theme yaml-mode web-mode virtualenvwrapper typescript-mode toml-mode terraform-mode solarized-theme org nginx-mode markdown-mode+ magit json-mode jinja2-mode jedi graphql-mode flycheck-pyflakes flycheck-color-mode-line fish-mode feature-mode dockerfile-mode ansible)))
  '(py-underscore-word-syntax-p nil)
  '(rg-group-result nil)
  '(rg-show-header t)
