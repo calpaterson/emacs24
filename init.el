@@ -146,11 +146,6 @@ This is useful, e.g., for use with `visual-line-mode;'."
 ;; Flycheck on by default
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-;; Assume postgres
-(add-hook 'sql-mode-hook
-          (lambda ()
-            (sql-set-product 'postgres)))
-
 ;; Get rid of the splash screen
 (setq inhibit-splash-screen t)
 
@@ -265,7 +260,11 @@ This is useful, e.g., for use with `visual-line-mode;'."
 
 ; SQL
 (setq sqlformat-command 'pgformatter)
-(define-key sql-mode-map (kbd "C-c C-c") 'sqlformat)
+(add-hook 'sql-mode-hook
+          (lambda ()
+            (sql-set-product 'postgres)
+            (local-set-key (kbd "C-c C-c") #'sqlformat)))
+
 
 ; Org
 (setq org-directory "~/Dropbox/documents/")
