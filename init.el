@@ -50,6 +50,9 @@
     yaml-mode
     ))
 
+;; blinking cursor gets in the way of transient-mark-mode
+(blink-cursor-mode 0)
+
 ;; start the server
 (server-start)
 
