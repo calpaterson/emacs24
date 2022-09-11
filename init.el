@@ -18,8 +18,6 @@
 (when (< emacs-major-version 27)
   (package-initialize))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives
-             '("org" . "http://orgmode.org/elpa/") t)
 
 (defconst very-important-packages
   '(
