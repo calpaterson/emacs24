@@ -36,8 +36,8 @@
     flycheck
     flycheck-color-mode-line
     flycheck-pyflakes
-    jedi
     json-mode
+    lsp-mode
     magit
     markdown-mode
     markdown-mode+
@@ -246,15 +246,13 @@ This is useful, e.g., for use with `visual-line-mode;'."
             (local-unset-key (kbd "<M-up>"))))
 
 ; Python
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq python-environment-directory "~/.virtualenvs")
-(add-hook 'venv-postactivate-hook
+(add-hook 'python-mode-hook
           (lambda ()
-            ;; need to run this first, otherwise jedi functions aren't defined
-            (jedi:setup)
-            (setq jedi:environment-root python-shell-virtualenv-path)
-            (jedi:stop-server)
-            (jedi:start-server)))
+            (lsp)
+            (local-set-key (kbd "C-c .") 'lsp-find-definition)
+            (local-set-key (kbd "C-c /") 'lsp-find-references)
+            (local-set-key (kbd "C-c ,") 'pop-tag-mark)))
+
 
 (when (fboundp 'electric-indent-mode)
   (electric-indent-mode -1))
