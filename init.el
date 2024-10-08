@@ -190,6 +190,9 @@ This is useful, e.g., for use with `visual-line-mode;'."
 (require 'auto-complete)
 (global-auto-complete-mode t)
 
+;; make opening urls work
+(url-handler-mode 1)
+
 ;; Always do syntax highlighting
 (global-font-lock-mode 1)
 
