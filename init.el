@@ -103,10 +103,7 @@
 (add-hook 'before-save-hook 'force-backup-of-buffer)
 
 ;; Fix copy and paste
-(if (string-equal system-type "gnu/linux")
-    (progn
-      (setq x-select-enable-clipboard t)
-      (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)))
+(setq select-enable-clipboard t)
 
 ;; Theme
 (load-theme 'solarized-light t)
